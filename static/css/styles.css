@@ -19,6 +19,7 @@ table, th, td {
   border: 1px solid white;
   border-collapse: collapse;
   padding: 5px;
+  color: white;
 }
 .date
 {
@@ -51,6 +52,8 @@ button{
   overflow: hidden;
   transition: 0.5s;
   cursor: pointer;
+  position: fixed;
+  bottom: 20px;
 }
 
 button:hover{

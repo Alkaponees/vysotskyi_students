@@ -81,8 +81,9 @@ def delete_data():
 @app.route('/select-form')
 def select_form():
     return render_template("select_form.html")
-@app.route('/select')
+@app.route('/select',methods=['POST'])
 def select_data():
+        
         # get the name(s) from the form
         names = request.form.getlist("name")
 
@@ -98,6 +99,21 @@ def select_data():
 
         # render the template with the results
         return render_template("select.html", rows=rows)
+
+@app.route('/all-form')
+def all():
+    names = request.form.getlist("name")
+
+        # build the SQL query
+    query = "SELECT * FROM students"
+    
+        # execute the query
+    cursor = conn.cursor()
+    cursor.execute(query)
+    rows = cursor.fetchall()
+
+        # render the template with the results
+    return render_template("select.html", rows=rows)
 
      
         
