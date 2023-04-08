@@ -2,7 +2,9 @@ from flask import Flask, render_template, request
 import mysql.connector
 
 app = Flask(__name__)
-
+@app.route("/")
+def home():
+    return render_template("index.html")
 # MySQL configuration
 mysql_config = {
     'host': 'localhost',
@@ -93,4 +95,4 @@ def select_data():
         return render_template("select_form.html")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0",port=5000,debug=True)
