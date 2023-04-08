@@ -11,8 +11,8 @@ $usertable = "students";
 $conn= new mysqli($hostname,$username,$password,$dbname);
  if(!$conn){
     die ("Connection failed: "). mysqli_connect_error();
- }
-echo "Connected successfully";
+ }else{
+  echo "Connected successfully";
 
 $user_name=$_POST["user_name"];
 $phone=$_POST["phone"];
@@ -25,11 +25,6 @@ $quer = "INSERT INTO $usertable (name,phone,institute,course,gender) VALUES
  ('$user_name','$phone','$institute','$course','$gender');";
 if ($conn->query($quer) === TRUE) {
     echo "New record created successfully";
-  } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-  }
-
-
 $sql="SELECT * FROM $usertable ;";
 $result2 = $conn->query($sql);
 
@@ -44,7 +39,15 @@ if ($result2->num_rows > 0) {
 } else {
   echo "0 results";
 }
-mysqli_close($conn);
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
+
+
+
+ }
 print '<a class="btn" href="../../index.html">Back to main menu</a>';
+mysqli_close($conn);
+
 ?>
 
