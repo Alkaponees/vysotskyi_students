@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Lviv Polytechnic </title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
     </head>
     <body>
@@ -18,10 +18,10 @@
           
         <h3> We give you choose your way. Let`s start our journay to music world.</h3>
         <p style="text-align: center;">
-            <a href ="forms/insert.html" class="btn"><button>1.Add record</button></a>
-            <a href ="forms/select_form.html" class="btn"><button>2.Search record</button></a>
-            <a href ="forms/delete.html" class="btn"><button>3.Delete record</button></a>
-            <a href ="forms/update.html" class="btn"><button>4.Update Record</button></a>
+            <a href ="insert.html" class="btn"><button>1.Add record</button></a>
+            <a href ="select_form.html" class="btn"><button>2.Search record</button></a>
+            <a href ="delete.html" class="btn"><button>3.Delete record</button></a>
+            <a href ="update.html" class="btn"><button>4.Update Record</button></a>
         </p>
     </body>
 
