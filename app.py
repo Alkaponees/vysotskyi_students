@@ -74,9 +74,11 @@ def delete_data():
     return "Data deleted successfully"
 
 # Route to display the select data table
+@app.route('/select-form')
+def select_form():
+    return render_template("select_form.html")
 @app.route('/select')
 def select_data():
-     if request.method == "POST":
         # get the name(s) from the form
         names = request.form.getlist("name")
 
@@ -93,9 +95,8 @@ def select_data():
         # render the template with the results
         return render_template("select.html", rows=rows)
 
-     else:
-        # render the form
-        return render_template("select_form.html")
+     
+        
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0",port=5000,debug=True)
