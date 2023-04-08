@@ -11,6 +11,11 @@
     padding: 1rem 3rem;
     text-align: center;
 }
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 5px;
+}
 .date
 {
     color:#f4f4f4; font-family: Helvetica; font-size: 18px; text-align: end;
