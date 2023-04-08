@@ -31,7 +31,7 @@ def insert_data():
     phone = request.form['phone']
     course = request.form['course']
     gender = request.form['gender']
-    query = "INSERT INTO users (name,phone,institute,course,gender) VALUES (%s, %s, %s, %s, %s)"
+    query = "INSERT INTO students (name,phone,institute,course,gender) VALUES (%s, %s, %s, %s, %s)"
     values = (name,phone,institute,course,gender)
     cursor.execute(query, values)
     conn.commit()
@@ -51,7 +51,7 @@ def update_data():
     phone = request.form['phone']
     course = request.form['course']
     gender = request.form['gender']
-    query = "UPDATE users SET name = %s, phone = %s ,institute=%s ,course =%s,gender=%s WHERE name = %s"
+    query = "UPDATE students SET name = %s, phone = %s ,institute=%s ,course =%s,gender=%s WHERE name = %s"
     values = (name, phone, institute,course,gender,name_1)
     cursor.execute(query, values)
     conn.commit()
@@ -67,7 +67,7 @@ def delete_form():
 def delete_data():
     name = request.form['name']
     institute = request.form['institute']
-    query = "DELETE FROM users WHERE name = %s AND institute = %s"
+    query = "DELETE FROM students WHERE name = %s AND institute = %s"
     values = (name,institute)
     cursor.execute(query, values)
     conn.commit()
@@ -83,7 +83,7 @@ def select_data():
         names = request.form.getlist("name")
 
         # build the SQL query
-        query = "SELECT * FROM student WHERE name IN (%s)"
+        query = "SELECT * FROM students WHERE name IN (%s)"
         placeholders = ", ".join(["%s" for _ in range(len(names))])
         query = query % placeholders
 
