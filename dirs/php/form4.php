@@ -56,7 +56,6 @@ $conn= new mysqli($hostname,$username,$password,$dbname);
   
   
   // Close the MySQL database connection
-  }
-print '<a class="btn" href="../../index.html">Back to main menu</a>';  
+  } 
 mysqli_close($conn);
 ?>
