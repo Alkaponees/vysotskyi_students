@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,redirect,url_for
 import mysql.connector
 
 app = Flask(__name__)
@@ -8,6 +8,10 @@ def home():
 @app.route("/main_menu")
 def main_menu():
     return render_template("index.html")
+
+@app.route('/success')
+def success():
+    return render_template('success.html')
 # MySQL configuration
 mysql_config = {
     'host': 'localhost',
@@ -35,7 +39,7 @@ def insert_data():
     values = (name,phone,institute,course,gender)
     cursor.execute(query, values)
     conn.commit()
-    return "Data inserted successfully"
+    return redirect(url_for('success'))
 
 # Route to display the update form
 @app.route('/update-form')
@@ -55,7 +59,7 @@ def update_data():
     values = (name, phone, institute,course,gender,name_1)
     cursor.execute(query, values)
     conn.commit()
-    return "Data updated successfully"
+    return redirect(url_for('success'))
 
 # Route to display the delete form
 @app.route('/delete-form')
@@ -71,7 +75,7 @@ def delete_data():
     values = (name,institute)
     cursor.execute(query, values)
     conn.commit()
-    return "Data deleted successfully"
+    return redirect(url_for('success'))
 
 # Route to display the select data table
 @app.route('/select-form')
