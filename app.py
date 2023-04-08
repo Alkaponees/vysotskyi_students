@@ -5,6 +5,9 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("index.html")
+@app.route("/main_menu")
+def main_menu():
+    return render_template("index.html")
 # MySQL configuration
 mysql_config = {
     'host': 'localhost',
@@ -18,7 +21,7 @@ cursor = conn.cursor()
 # Route to display the insert form
 @app.route('/insert-form')
 def insert_form():
-    return render_template('forms/insert.html')
+    return render_template('insert.html')
 
 # Route to handle the insert form data
 @app.route('/insert', methods=['POST'])
@@ -37,7 +40,7 @@ def insert_data():
 # Route to display the update form
 @app.route('/update-form')
 def update_form():
-    return render_template('forms/update.html')
+    return render_template('update.html')
 
 # Route to handle the update form data
 @app.route('/update', methods=['POST'])
@@ -57,7 +60,7 @@ def update_data():
 # Route to display the delete form
 @app.route('/delete-form')
 def delete_form():
-    return render_template('forms/delete.html')
+    return render_template('delete.html')
 
 # Route to handle the delete form data
 @app.route('/delete', methods=['POST'])
