@@ -1,0 +1,60 @@
+  a {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    color: #f4f4f4;
+    text-transform: uppercase;
+  }
+  h1{
+    font-family: Copperplate;
+    color: #f4f4f4;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    text-align: center;
+}
+.date
+{
+    color:#f4f4f4; font-family: Helvetica; font-size: 18px; text-align: end;
+}
+h3 { color: #f4f4f4; font-family: 'Helvetica Neue', sans-serif; font-size: 14px; font-weight: 100; }
+p { color: #adb7bd; font-family: 'Lucida Sans', Arial, sans-serif; font-size: 16px; line-height: 26px; text-indent: 30px; margin: 0; }
+b { color: #adb7bd; font-family: 'Lucida Sans', Arial, sans-serif; font-size: 16px; line-height: 26px; text-indent: 30px; margin: 0; }
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*{
+    margin: 1.5 ,1.5 ,1.5 ,1.5;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: #050801;
+    font-family: 'Raleway', sans-serif;
+}
+
+button{
+  padding: 25px 30px;
+  background-color: #050801;
+  color: #03e9f4;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+button:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}  
+.count
+{
+ text-align-last:left ;
+ top: 150px;   
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lviv Polytechnic </title>
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+    <body>
+        <div class="date", id="date">
+            <script>
+                date = new Date().toLocaleDateString();
+                document.write(date);
+                </script>
+        </div>  
+        <h1>
+            Welcome to Lviv Polytechnic
+        </h1>
+          
+        <h3> We give you choose your way. Let`s start our journay to music world.</h3>
+        <p style="text-align: center;">
+            <a href ="htmls/form1.html" class="btn"><button>1.Add record</button></a>
+            <a href ="htmls/form2.html" class="btn"><button>2.Search record</button></a>
+            <a href ="htmls/form3.html" class="btn"><button>3.Delete record</button></a>
+            <a href ="htmls/form4.html" class="btn"><button>4.Update Record</button></a>
+        </p>
+            
+        <h5>
+            <p id="count">
+                <?php
+                  session_start();
+          
+                  if(isset($_SESSION['count'])) {
+                    $_SESSION['count'] += 1;
+                  } else {
+                    $_SESSION['count'] = 1;
+                  }
+          
+                  echo "You have visited this page " . $_SESSION['count'] . " times.";
+                ?>
+              </p>
+        </h5>
+    </body>
+
+</html>
