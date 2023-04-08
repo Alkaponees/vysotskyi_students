@@ -40,3 +40,6 @@ INSERT INTO students (name,institute,gender,phone,course) VALUES
 ( 'Tess Played', 'ІНЕМ',  'male',"+380-435-738-853","МА-107"),
 ( 'Reppy Red', 'ІГСН',  'female',"+380-149-521-183","УМ-205");
 
+
+
+

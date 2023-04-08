@@ -2,7 +2,7 @@
 
 $hostname="localhost"; 
 $username="vysotskyi"; 
-$password="vysotskyi";
+$password="Vys0tsky!";
 /*Ім'я бази даних*/
 $dbname="vysotskyi_students";
 /*Ім'я таблиці в базі даних*/
