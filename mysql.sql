@@ -4,7 +4,7 @@ CREATE TABLE `students` (
   `phone` VARCHAR(100)  NOT NULL DEFAULT '',
   `institute` VARCHAR(10) NOT NULL DEFAULT '',
   `course` VARCHAR(20)  NOT NULL DEFAULT '',
-  `gender` VARCHAR(6) CHARACTER SET utf8 NOT NULL DEFAULT 'male',
+  `gender` VARCHAR(6)  NOT NULL DEFAULT 'male',
   PRIMARY KEY (`id`)
 ) ;
 
